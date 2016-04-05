@@ -121,6 +121,12 @@ body {
   font-weight: bold;
 }
 
+.cover .btn-lg:hover {
+  background: red;
+  color: #282828;
+}
+
+
 .lead {
   font-family: 'Nunito', sans-serif;
   margin-bottom: 20px;
@@ -129,6 +135,15 @@ body {
   line-height: 1.4;
 }
 
+.form-control {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+input {
+  margin: 5px;
+}
 
 /*
  * Footer
