@@ -27,30 +27,74 @@ a:hover {
 html,
 body {
   height: 100%;
-  /*background-image: url("https://s3.amazonaws.com/joinmiraki/group_support_blurb.jpg");*/
-  /*background-size: 100%;*/
   background-color: #41cd8c;
   color: #fff;
-}
-body {
-  /*color: #fff;*/
   text-align: center;
-  /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
+.wrapper {
+  background-color: #41cd8c;
+  opacity: 0.3;
   display: table;
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
-          /*box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+  position: absolute top: 0px; left: 0px;;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  position: absolute;
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -moz-animation: fadein 4s; /* Firefox */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera */
+  animation: fadein 4s;
 }
+
+.site-wrapper {
+  position: relative; 
+  height: 100%;
+  background-image: url("https://s3.amazonaws.com/joinmiraki/support.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
+  position: absolute;
 }
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 0.3; }
+  }
+
+        /* Firefox */
+        @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 0.3; }
+        }
+
+        /* Safari and Chrome */
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 0.3; }
+        }
+
+        /* Internet Explorer */
+        @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 0.3; }
+        }​
+
+        /* Opera */
+        @-o-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 0.3; }
+        }​
+
 .cover-container {
   margin-right: auto;
   margin-left: auto;
@@ -108,21 +152,24 @@ body {
   }
 }
 
-
 /*
  * Cover
  */
 
 .cover {
-  padding: 0 20px;
+  padding: 100px 30px;
 }
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+  background: none;
+  border: 2px solid #FFF;
+  border-radius: 20px;
+  color: #FFF
 }
 
 .cover .btn-lg:hover {
-  background: red;
+  background: #ccc;
   color: #282828;
 }
 
@@ -183,7 +230,6 @@ input {
 
 @media (min-width: 992px) {
   .masthead,
-  .mastfoot,
   .cover-container {
     width: 700px;
   }
